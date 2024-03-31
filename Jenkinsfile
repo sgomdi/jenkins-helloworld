@@ -1,15 +1,10 @@
 pipeline {
-  agent any
-  stages {
-    stage('verify version') {
-      steps {
-        bat 'php --version'
-      }
+    agent any
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
     }
-    stage('hello') {
-      steps {
-        bat 'php hello.php'
-      }
-    }
-  }
 }
